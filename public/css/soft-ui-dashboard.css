@@ -117,6 +117,39 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+/* Aturan @font-face untuk Poppins Bold */
+@font-face {
+  font-family: 'Poppins Bold';
+  src: url('/fonts/poppins-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Aturan @font-face untuk Poppins Semi-Bold */
+@font-face {
+  font-family: 'Poppins Semi-Bold';
+  src: url('/fonts/poppins-semiBold.ttf') format('truetype');
+  font-weight: 600; /* Sesuaikan dengan berat font semi-bold */
+  font-style: normal;
+}
+
+/* Aturan @font-face untuk Poppins Regular */
+@font-face {
+  font-family: 'Poppins Regular';
+  src: url('/fonts/poppins-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Aturan @font-face untuk Poppins Medium */
+@font-face {
+  font-family: 'Poppins Medium';
+  src: url('/fonts/poppins-medium.ttf') format('truetype');
+  font-weight: 500; /* Sesuaikan dengan berat font medium */
+  font-style: normal;
+}
+
+
 hr {
   margin: 1rem 0;
   color: inherit;
@@ -142,6 +175,7 @@ h6,
   font-weight: 400;
   line-height: 1.2;
   color: #344767;
+  
 }
 
 h1,

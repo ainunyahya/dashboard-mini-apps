@@ -12,6 +12,8 @@ class HutangPiutangController extends Controller
 {
     function index()
     {
+        $pageTitle = "Hutang & Piutang";
+        
         $result = DB::table('orders')
             ->select(
                 DB::raw("DATE_FORMAT(orders.order_time, '%Y-%m') AS tanggal"),
@@ -54,6 +56,6 @@ class HutangPiutangController extends Controller
         $chartData1 = json_encode($result1);
         $chartData2 = json_encode($result2);
 
-        return view('hutangpiutang', compact('chartData', 'chartData1', 'chartData2'));
+        return view('hutangpiutang', compact('chartData', 'chartData1', 'chartData2', 'pageTitle'));
     }
 }

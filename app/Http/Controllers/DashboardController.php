@@ -10,6 +10,8 @@ class DashboardController extends Controller
 {
     function index()
     {
+        $pageTitle = "Dashboard";
+        
         $result = Order::selectRaw('
             DATE_FORMAT(orders.order_time, "%Y-%m") AS bulan_tahun,
             SUM(orders_detail.qty * products.price_sale) AS total_pendapatan,
@@ -37,7 +39,8 @@ class DashboardController extends Controller
 
         return view('dashboard', [
             'result' => $result,
-            'result3' => $result3
+            'result3' => $result3,
+            'pageTitle' => $pageTitle
         ]);
     }
 }

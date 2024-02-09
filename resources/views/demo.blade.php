@@ -21,7 +21,7 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="pull-left">
-            <h2>Pesanan</h2>
+            <h2 style="font-family: 'Poppins Semi-Bold';">Pesanan</h2>
         </div>
         <a href="demo/create" class="btn btn-success">Buat</a>
     </div>

@@ -5,19 +5,19 @@
 <div class="form-group">
     <div class="row mb-3">
         <div class="col-12 col-md-4">
-            <label for="yearFilter">Tahun:</label>
+            <h6 for="yearFilter" style="font-family: 'Poppins Medium'; color: #000000;">Tahun:</h6>
             <select id="yearFilter" class="form-control">
                 <!-- Isi opsi tahun sesuai kebutuhan -->
             </select>
         </div>
         <div class="col-12 col-md-4">
-            <label for="startMonthFilter">Bulan Awal:</label>
+            <h6 for="startMonthFilter" style="font-family: 'Poppins Medium'; color: #000000;">Bulan Awal:</h6>
             <select id="startMonthFilter" class="form-control">
                 <!-- Isi opsi bulan sesuai kebutuhan -->
             </select>
         </div>
         <div class="col-12 col-md-4">
-            <label for="endMonthFilter">Bulan Akhir:</label>
+            <h6 for="endMonthFilter" style="font-family: 'Poppins Medium'; color: #000000;">Bulan Akhir:</h6>
             <select id="endMonthFilter" class="form-control">
                 <!-- Isi opsi bulan sesuai kebutuhan -->
             </select>
@@ -30,24 +30,24 @@
         <div class="col-12 col-md-4">
             <div class="card" style="border-radius: 10px;">
                 <div class="card-body">
-                    <h5 class="card-title">Total Pendapatan</h5>
-                    <p class="card-text" id="totalPendapatan"></p>
+                    <h5 class="card-title" style="font-family: 'Poppins Bold'; color: #2F70F2; padding-bottom: 4px">Total Pendapatan</h5>
+                    <p class="card-text" id="totalPendapatan" style="font-family: 'Poppins Regular';"></p>
                 </div>
             </div>
         </div>
         <div class="col-12 col-md-4">
             <div class="card" style="border-radius: 10px;">
                 <div class="card-body">
-                    <h5 class="card-title">Total Pembelian</h5>
-                    <p class="card-text" id="totalPembelian"></p>
+                    <h5 class="card-title" style="font-family: 'Poppins Bold'; color: #876AFE; padding-bottom: 4px">Total Pembelian</h5>
+                    <p class="card-text" id="totalPembelian" style="font-family: 'Poppins Regular';"></p>
                 </div>
             </div>
         </div>
         <div class="col-12 col-md-4">
             <div class="card" style="border-radius: 10px;">
                 <div class="card-body">
-                    <h5 class="card-title">Total Komisi</h5>
-                    <p class="card-text" id="totalKomisi"></p>
+                    <h5 class="card-title" style="font-family: 'Poppins Bold'; color: #FFBC02; padding-bottom: 4px">Total Komisi</h5>
+                    <p class="card-text" id="totalKomisi" style="font-family: 'Poppins Regular';"></p>
                 </div>
             </div>
         </div>
@@ -59,16 +59,16 @@
         <div class="col-12 col-md-4">
             <div class="card" style="border-radius: 10px;">
                 <div class="card-body">
-                    <h5 class="card-title">Total Piutang</h5>
-                    <p class="card-text" id="totalPiutang"></p>
+                    <h5 class="card-title" style="font-family: 'Poppins Bold'; color: #4BC0C0; padding-bottom: 4px">Total Piutang</h5>
+                    <p class="card-text" id="totalPiutang" style="font-family: 'Poppins Regular';"></p>
                 </div>
             </div>
         </div>
         <div class="col-12 col-md-4">
             <div class="card" style="border-radius: 10px;">
                 <div class="card-body">
-                    <h5 class="card-title">Total Hutang</h5>
-                    <p class="card-text" id="totalHutang"></p>
+                    <h5 class="card-title" style="font-family: 'Poppins Bold'; color: #FF6384; padding-bottom: 4px">Total Hutang</h5>
+                    <p class="card-text" id="totalHutang" style="font-family: 'Poppins Regular';"></p>
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@
 <div class="card-body p-4 mb-4 bg-white" style="width: 100%;  border-radius: 10px;">
     <div class="d-flex align-items-baseline">
         <i class="fas fa-database m-2"></i> <!-- Ganti "fa-icon-name" dengan kelas ikon yang sesuai -->
-        <h6>Grafik ITsFood & ITsMine </h6>
+        <h6 style="font-family: 'Poppins Medium';">Grafik ITsFood & ITsMine </h6>
     </div>
     <div class="chart">
         <canvas id="chart-line" class="chart-canvas"></canvas>
@@ -88,7 +88,7 @@
 <div class="card-body p-4 mb-4 bg-white" style="width: 100%;  border-radius: 10px;">
     <div class="d-flex align-items-baseline">
         <i class="fas fa-database m-2"></i> <!-- Ganti "fa-icon-name" dengan kelas ikon yang sesuai -->
-        <h6>Grafik ITsFood & ITsMine </h6>
+        <h6 style="font-family: 'Poppins Medium';">Grafik ITsFood & ITsMine </h6>
     </div>
     <div class="chart">
         <canvas id="chart-line3" class="chart-canvas"></canvas>
@@ -237,22 +237,22 @@
                 {
                     label: 'Pendapatan',
                     data: chartData.map(data => data.total_pendapatan),
-                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                    borderColor: 'rgba(255, 99, 132, 1)',
+                    backgroundColor: 'rgba(47, 112, 242, 0.2)',
+                    borderColor: 'rgb(47, 112, 242, 1)',
                     borderWidth: 1
                 },
                 {
                     label: 'Pembelian',
                     data: chartData.map(data => data.total_pembelian),
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(135, 106, 254, 0.2)',
+                    borderColor: 'rgba(135, 106, 254, 1)',
                     borderWidth: 1
                 },
                 {
                     label: 'Komisi',
                     data: chartData.map(data => data.total_komisi),
-                    backgroundColor: 'rgba(255, 205, 86, 0.2)',
-                    borderColor: 'rgba(255, 205, 86, 1)',
+                    backgroundColor: 'rgba(255, 188, 2, 0.2)',
+                    borderColor: 'rgba(255, 188, 2, 1)',
                     borderWidth: 1
                 }
             ]

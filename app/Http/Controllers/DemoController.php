@@ -14,8 +14,11 @@ use Illuminate\Support\Facades\DB;
 
 class DemoController extends Controller
 {
+    
     public function index()
     {
+        $pageTitle = "Pesanan";
+        
         $data = Order::with('details', 'customer.unit')
             ->select('orders.id', 'orders.order_time', 'customers.name as user_name', 'units.name as unit_name', 'orders_detail.qty', 'products.price_sale', 'orders.extra_cost')
             ->join('customers', 'orders.customer_id', '=', 'customers.id')
@@ -26,7 +29,7 @@ class DemoController extends Controller
             ->orderByDesc('orders.order_time')
             ->get();
     
-        return view('demo', ['data' => $data]);
+        return view('demo', ['data' => $data, 'pageTitle' => $pageTitle]);
     }
     
     public function create()

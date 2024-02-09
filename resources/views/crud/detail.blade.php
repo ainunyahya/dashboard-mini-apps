@@ -32,7 +32,7 @@
             <div class="row" style="padding-right: 10px">
                 <div class="col-lg-12 margin-t">
                     <div class="pull-left d-flex justify-content-between align-items-center py-3">
-                        <h2>Detail Pesanan</h2>
+                        <h2 style="font-family: 'Poppins Semi-Bold';">Detail Pesanan</h2>
                     </div>
                     <a href="{{ route('demo.index') }}" class="btn btn-primary">Kembali</a>
                 </div>
@@ -44,80 +44,80 @@
                     <!-- Details -->
                     <div class="card mb-4" style="border-radius: 15px;">
                         <div class="card-body">
-                            <div class=" mb-2 d-flex justify-content-between">
-                                <strong>ID :</strong>
-                                {{ $order->id }}
+                            <div class=" mb-1 d-flex justify-content-between">
+                                <h6 style="font-family: 'Poppins Medium'; color: #000000;">ID :</h6>
+                                <h6 style="font-family: 'Poppins Regular';">{{ $order->id }}</h6>
                             </div>
-                            <div class=" mb-2 d-flex justify-content-between">
-                                <strong>Tanggal order :</strong>
-                                {{ $order->order_time }}
+                            <div class=" mb-1 d-flex justify-content-between">
+                                <h6 style="font-family: 'Poppins Medium'; color: #000000;">Tanggal order :</h6>
+                                <h6 style="font-family: 'Poppins Regular';">{{ $order->order_time }}</h6>
                             </div>
-                            <div class=" mb-2 d-flex justify-content-between">
-                                <strong>pembayaran ke supplier :</strong>
-                                {{ $order->pay_to_supplier }}
+                            <div class=" mb-1 d-flex justify-content-between">
+                                <h6 style="font-family: 'Poppins Medium'; color: #000000;">pembayaran ke supplier :</h6>
+                                <h6 style="font-family: 'Poppins Regular';">{{ $order->pay_to_supplier }}</h6>
                             </div>
-                            <div class=" mb-2 d-flex justify-content-between">
-                                <strong>Pembayaran dari user :</strong> 
-                                {{ $order->pay_from_customer }}
+                            <div class=" mb-1 d-flex justify-content-between">
+                                <h6 style="font-family: 'Poppins Medium'; color: #000000;">Pembayaran dari user :</h6> 
+                                <h6 style="font-family: 'Poppins Regular';">{{ $order->pay_from_customer }}</h6>
                             </div>
-                            <div class=" mb-2 d-flex justify-content-between">
-                                <strong>Nama :</strong>
-                                {{ optional($order->customer)->name }} 
+                            <div class=" mb-1 d-flex justify-content-between">
+                                <h6 style="font-family: 'Poppins Medium'; color: #000000;">Nama :</h6>
+                                <h6 style="font-family: 'Poppins Regular';">{{ optional($order->customer)->name }}</h6> 
                             </div>
-                            <div class=" mb-2 d-flex justify-content-between">
-                                <strong>Unit :</strong> 
-                                {{ optional(optional($order->customer)->unit)->name }}  
+                            <div class=" mb-1 d-flex justify-content-between">
+                                <h6 style="font-family: 'Poppins Medium'; color: #000000;">Unit :</h6> 
+                                <h6 style="font-family: 'Poppins Regular';">{{ optional(optional($order->customer)->unit)->name }}</h6>  
                             </div>
                             <table class="table table-borderless">
                                 <tbody>
                                     <tr>
-                                        <td><strong>Nama produk</strong></td>
-                                        <td><strong>Jumlah</strong></td>
-                                        <td><strong>Harga</strong></td>
+                                        <td><h6 style="font-family: 'Poppins Medium'; color: #000000;">Nama produk</h6></td>
+                                        <td><h6 style="font-family: 'Poppins Medium'; color: #000000;">Jumlah</h6></td>
+                                        <td><h6 style="font-family: 'Poppins Medium'; color: #000000;">Harga</h6></td>
                                     </tr>
                                     <tr>
                                     <td>
                                         @if($order->details instanceof \Illuminate\Database\Eloquent\Collection)
                                         <!-- Loop melalui koleksi details -->
                                         @foreach($order->details as $detail)
-                                            {{ optional($detail->product)->name }}
+                                            <h6 style="font-family: 'Poppins Regular';">{{ optional($detail->product)->name }}</h6>
                                         @endforeach
                                         @else
                                             <!-- Asumsikan details adalah instance model tunggal -->
-                                            {{ optional(optional($order->details)->product)->name }}
+                                            <h6 style="font-family: 'Poppins Regular';">{{ optional(optional($order->details)->product)->name }}</h6>
                                         @endif
                                     </td>
                                     <td>
                                         @if($order->details instanceof \Illuminate\Database\Eloquent\Collection)
                                         <!-- Loop melalui koleksi details -->
                                         @foreach($order->details as $detail)
-                                            {{ $detail->qty }}
+                                            <h6 style="font-family: 'Poppins Regular';">{{ $detail->qty }}</h6>
                                         @endforeach
                                         @else
                                             <!-- Asumsikan details adalah instance model tunggal -->
-                                            {{ optional($order->details)->qty }}
+                                            <h6 style="font-family: 'Poppins Regular';">{{ optional($order->details)->qty }}</h6>
                                         @endif
                                     </td>
                                     <td>
                                         @if($order->details instanceof \Illuminate\Database\Eloquent\Collection)
                                         <!-- Loop melalui koleksi details -->
                                         @foreach($order->details as $detail)
-                                            {{ 'Rp. ' . number_format(optional($detail->product)->price_sale, 0, ',', '.') }}
+                                            <h6 style="font-family: 'Poppins Regular';">{{ 'Rp. ' . number_format(optional($detail->product)->price_sale, 0, ',', '.') }}</h6>
                                         @endforeach
                                         @else
                                             <!-- Asumsikan details adalah instance model tunggal -->
-                                            {{ 'Rp. ' . number_format(optional(optional($order->details)->product)->price_sale, 0, ',', '.') }}
+                                            <h6 style="font-family: 'Poppins Regular';">{{ 'Rp. ' . number_format(optional(optional($order->details)->product)->price_sale, 0, ',', '.') }}</h6>
                                         @endif
                                     </td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class=" mb-2 d-flex justify-content-between">
-                                <strong>Extra cost :</strong>
-                                {{ 'Rp. ' . number_format($order->extra_cost ?? 0, 0, ',', '.') }}
+                            <div class=" mb-1 d-flex justify-content-between">
+                                <h6 style="font-family: 'Poppins Medium'; color: #000000;">Extra cost :</h6>
+                                <h6 style="font-family: 'Poppins Regular';">{{ 'Rp. ' . number_format($order->extra_cost ?? 0, 0, ',', '.') }}</h6>
                             </div>
-                            <div class=" mb-2 d-flex justify-content-between">
-                                <strong>Total :</strong>
+                            <div class=" mb-1 d-flex justify-content-between">
+                                <h6 style="font-family: 'Poppins Medium'; color: #000000;">Total :</h6>
                                 @php
                                     $total = 0; // variabel untuk menyimpan total
                                 @endphp
@@ -130,32 +130,32 @@
                                         $total += $subtotal; 
                                     @endphp
                                 @endforeach
-                                {{ 'Rp. ' . number_format($total, 0, ',', '.') }}
+                                <h6 style="font-family: 'Poppins Regular';">{{ 'Rp. ' . number_format($total, 0, ',', '.') }}</h6>
                             </div>
-                            <div class=" mb-2 d-flex justify-content-between">
+                            <div class=" mb-1 d-flex justify-content-between">
                                 @if($order->details instanceof \Illuminate\Database\Eloquent\Collection)
                                 <!-- Loop melalui koleksi details -->
                                 @foreach($order->details as $detail)
-                                    <strong>Catatan :</strong>
-                                    {{ $detail->note }}
+                                    <h6 style="font-family: 'Poppins Medium'; color: #000000;">Catatan :</h6>
+                                    <h6 style="font-family: 'Poppins Regular';">{{ $detail->note }}</h6>
                                 @endforeach
                                 @else
                                     <!-- Asumsikan details adalah instance model tunggal -->
-                                    <strong>Catatan :</strong> 
-                                    {{ optional($order->details)->note }}
+                                    <h6 style="font-family: 'Poppins Medium'; color: #000000;">Catatan :</h6> 
+                                    <h6 style="font-family: 'Poppins Regular';">{{ optional($order->details)->note }}</h6>
                                 @endif
                             </div>
                             <div class=" mb-4">
                                 @if($order->details instanceof \Illuminate\Database\Eloquent\Collection)
                                 <!-- Loop melalui koleksi details -->
                                 @foreach($order->details as $detail)
-                                    <strong>Alamat :</strong><br>
-                                    {{ $detail->address }}
+                                    <h6 style="font-family: 'Poppins Medium'; color: #000000;">Alamat :</h6><br>
+                                    <h6 style="font-family: 'Poppins Regular';">{{ $detail->address }}</h6>
                                 @endforeach
                                 @else
                                     <!-- Asumsikan details adalah instance model tunggal -->
-                                    <strong>Alamat :</strong><br>
-                                    {{ optional($order->details)->address }}
+                                    <h6 style="font-family: 'Poppins Medium'; color: #000000;">Alamat :</h6><br>
+                                    <h6 style="font-family: 'Poppins Regular';">{{ optional($order->details)->address }}</h6>
                                 @endif
                             </div>
                         </div>

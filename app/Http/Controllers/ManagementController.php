@@ -13,6 +13,8 @@ class ManagementController extends Controller
 {
     public function index()
     {
+        $pageTitle = "Management";
+        
         // +++++++ awal query chart pendapatan, pembelian, komisi +++++++
         $result = DB::table('orders')
         ->select(
@@ -92,7 +94,8 @@ class ManagementController extends Controller
             'result2' => $result2,
             'result3' => $result3,
             'result4' => $result4,
-            'result5' => $result5
+            'result5' => $result5,
+            'pageTitle' => $pageTitle
         ]);
     }
 }

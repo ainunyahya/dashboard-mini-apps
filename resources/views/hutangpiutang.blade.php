@@ -14,7 +14,7 @@
         <div class="card-body p-4 ml-2 bg-white" style="width: 45%;  border-radius: 10px;">
             <div class="d-flex align-items-baseline">
                 <i class="fas fa-database m-2"></i>
-                <h6>Piutang</h6>
+                <h6 style="font-family: 'Poppins Medium';">Piutang</h6>
             </div>
             <div class="chart">
                 <canvas id="chart-line-1" class="chart-canvas"></canvas>
@@ -23,7 +23,7 @@
         <div class="card-body p-4 ml-4 mr-2 bg-white" style="width: 45%;  border-radius: 10px;">
         <div class="d-flex align-items-baseline">
             <i class="fas fa-database m-2"></i>
-            <h6>Hutang</h6>
+            <h6 style="font-family: 'Poppins Medium';">Hutang</h6>
         </div>
         <div class="chart">
             <canvas id="chart-line-2" class="chart-canvas"></canvas>
@@ -36,7 +36,7 @@
         <div class="card-body p-4 ml-2 bg-white" style="width: 45%;  border-radius: 10px;">
             <div class="d-flex align-items-baseline ">
                 <i class="fas fa-database m-2 pb-2"></i>
-                <h6>Unit dengan hutang tertinggi</h6>
+                <h6 style="font-family: 'Poppins Medium';">Unit dengan hutang tertinggi</h6>
             </div>
             <div >
                 <table class="table table-striped">
@@ -62,7 +62,7 @@
         <div class="card-body p-4 ml-2 bg-white" style="width: 45%;  border-radius: 10px;">
             <div class="d-flex align-items-baseline">
                 <i class="fas fa-database m-2 pb-2"></i>
-                <h6>Hutang ke Vendor tertinggi</h6>
+                <h6 style="font-family: 'Poppins Medium';">Hutang ke Vendor tertinggi</h6>
             </div>
             <div>
                 <table class="table table-striped">

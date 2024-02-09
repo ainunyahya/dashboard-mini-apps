@@ -32,7 +32,7 @@
             <div class="row" style="padding-right: 10px">
                 <div class="col-lg-12 margin-t">
                     <div class="pull-left d-flex justify-content-between align-items-center py-3">
-                        <h2>Buat Pesanan</h2>
+                        <h2 style="font-family: 'Poppins Semi-Bold';">Buat Pesanan</h2>
                     </div>
                     <a href="{{ route('demo.index') }}" class="btn btn-primary">Kembali</a>
                 </div>
@@ -48,12 +48,12 @@
                     <div class="card-body px-2 pt-0 pb-2">
                         <form action="{{ route('demo.store') }}" method="POST">
                             @csrf
-                            <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Nama</label>
+                            <div class="mb-3 mt-2">
+                              <h6 style="font-family: 'Poppins Medium'; color: #000000;" for="exampleInputEmail1" >Nama</h6>
                               <input name="user_name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="masukkan nama anda">
                             </div>
                             <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Unit</label>
+                              <h6 style="font-family: 'Poppins Medium'; color: #000000;" for="exampleInputEmail1" >Unit</h6>
                                <select name="unit_name" class="form-select" aria-label="Default select example">
                                 <option selected>pilih unit</option>
                                 <!-- Loop untuk menampilkan opsi dari data produk -->
@@ -63,7 +63,7 @@
                               </select>
                             </div>
                             <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Produk</label>
+                              <h6 style="font-family: 'Poppins Medium'; color: #000000;" for="exampleInputEmail1" >Produk</h6>
                               <select name="product_id" class="form-select" aria-label="Default select example">
                                 <option selected>pilih produk</option>
                                 <!-- Loop untuk menampilkan opsi dari data produk -->
@@ -73,19 +73,19 @@
                               </select>
                             </div>
                             <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Jumlah</label>
+                              <h6 style="font-family: 'Poppins Medium'; color: #000000;" for="exampleInputEmail1" >Jumlah</h6>
                               <input name="qty" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="masukkan jumlah produk">
                             </div>
                             <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Extra Cost</label>
+                              <h6 style="font-family: 'Poppins Medium'; color: #000000;" for="exampleInputEmail1" >Extra Cost</h6>
                               <input name="extra_cost" type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="masukkan nominal extra cost">
                             </div>
                             <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Note</label>
+                              <h6 style="font-family: 'Poppins Medium'; color: #000000;" for="exampleInputEmail1" >Note</h6>
                               <input name="note" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="masukkan pesan anda">
                             </div>
                             <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Alamat</label>
+                              <h6 style="font-family: 'Poppins Medium'; color: #000000;" for="exampleInputEmail1" >Alamat</h6>
                               <input name="address" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="masukkan alamat anda">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
