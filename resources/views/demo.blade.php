@@ -10,6 +10,11 @@
     .dropdown-menu li {
         display: block;
         
+    /* CSS untuk mengatur ukuran tombol Next dan Previous */
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+        font-size: 14px; /* Atur ukuran font */
+        padding: 6px 10px; /* Atur padding tombol */
+
     }
 </style>
 
@@ -22,7 +27,7 @@
     </div>
 </div>
     <div class="card-body mb-4 p-4 bg-white" style="width: 100%;  border-radius: 10px;">
-        <div class="table-container" style="width: 100%">
+        <div class="table-container p-1" style="width: 100%">
             <table id="example" class="table table-striped table-bordered table-hover" style="width:100%; font-size: 12px;">
                 <thead>
                     <tr>
@@ -63,9 +68,14 @@
                                           <a class="dropdown-item" href="{{ route('demo.edit', $order->id) }}">Edit</a>
                                         </li>
                                         <li>
-                                          <a class="dropdown-item" href="#" onclick="deletePesanan({{ $order->id }})">delete</a>
+                                            <form action="{{ route('demo.destroy', $order->id) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" onclick="return confirm('Apakah Anda yakin ingin menghapus pesanan ini?')" class="dropdown-item">
+                                                    Delete</button>
+                                            </form>
                                         </li>
-                                      </ul>
+                                    </ul>
                                   </div>
                                 
                             </td>
@@ -76,43 +86,23 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script>
         $(document).ready(function () {
             $('#example').DataTable({
-                "order": [[0, 'desc']]
+                "order": [[0, 'desc']],
+                "language": {
+            }
             });
         });
     
-        function deletePesanan(id) {
-            if (confirm('Apakah Anda yakin ingin menghapus pesanan ini?')) {
-                $.ajax({
-                    type: 'DELETE',
-                    url: baseUrl + id,
-                    data: {
-                        "_token": "{{ csrf_token() }}"
-                    },
-                    success: function (data) {
-                        console.log(data);
-                        location.reload(); // Menggunakan location.reload() untuk merefresh halaman
-                    },
-                    error: function (data) {
-                        console.error('Error:', data);
-                    }
-                });
-            }
-        }
     </script>
     
 @endsection
 
 @push('scripts')
-    <script>
-        // Pass the base URL to the JavaScript file
-        var baseUrl = '{{ url("demo") }}';
-    </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="{{ asset('js/custom.js') }}"></script> <!-- Assuming custom.js is your JavaScript file -->
 @endpush

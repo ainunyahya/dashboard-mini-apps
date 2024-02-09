@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DemoController;
 use App\Http\Controllers\DashboardController;
@@ -37,7 +38,7 @@ Route::middleware(['auth'])->group(function(){
         Route::post('/', [DemoController::class, 'store'])->name('demo.store');
         Route::get('/detail/{id}', [DemoController::class, 'show'])->name('detail.show');
         Route::get('/{id}/edit', [DemoController::class, 'edit'])->name('demo.edit');
-        Route::put('/{id}/edit', [DemoController::class, 'update'])->name('demo.edit');
+        Route::put('/{id}/edit', [DemoController::class, 'update'])->name('demo.update');
         Route::delete('/{id}', [DemoController::class, 'destroy'])->name('demo.destroy');
     });
 });

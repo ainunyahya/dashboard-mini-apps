@@ -120,12 +120,12 @@ class DemoController extends Controller
         $pesanan = Order::find($id);
 
         if (!$pesanan) {
-            return redirect()->route('nama_route_index')->with('error', 'Pesanan tidak ditemukan.');
+            return redirect()->route('demo.index')->with('error', 'Pesanan tidak ditemukan.');
         }
 
         $pesanan->delete();
 
-        return redirect()->route('nama_route_index')->with('success', 'Pesanan berhasil dihapus.');
+        return redirect()->route('demo.index')->with('success', 'Pesanan berhasil dihapus.');
     }
 
 }
