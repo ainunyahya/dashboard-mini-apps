@@ -31,7 +31,7 @@
             <div class="card" style="border-radius: 10px;">
                 <div class="card-body">
                     <h5 class="card-title" style="font-family: 'Poppins Bold'; color: #2F70F2; padding-bottom: 4px">Total Pendapatan</h5>
-                    <p class="card-text" id="totalPendapatan" style="font-family: 'Poppins Regular';"></p>
+                    <p class="card-text" id="totalPendapatan" style="font-family: 'Poppins Semi-Bold';"></p>
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
             <div class="card" style="border-radius: 10px;">
                 <div class="card-body">
                     <h5 class="card-title" style="font-family: 'Poppins Bold'; color: #876AFE; padding-bottom: 4px">Total Pembelian</h5>
-                    <p class="card-text" id="totalPembelian" style="font-family: 'Poppins Regular';"></p>
+                    <p class="card-text" id="totalPembelian" style="font-family: 'Poppins Semi-Bold';"></p>
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
             <div class="card" style="border-radius: 10px;">
                 <div class="card-body">
                     <h5 class="card-title" style="font-family: 'Poppins Bold'; color: #FFBC02; padding-bottom: 4px">Total Komisi</h5>
-                    <p class="card-text" id="totalKomisi" style="font-family: 'Poppins Regular';"></p>
+                    <p class="card-text" id="totalKomisi" style="font-family: 'Poppins Semi-Bold';"></p>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@
             <div class="card" style="border-radius: 10px;">
                 <div class="card-body">
                     <h5 class="card-title" style="font-family: 'Poppins Bold'; color: #4BC0C0; padding-bottom: 4px">Total Piutang</h5>
-                    <p class="card-text" id="totalPiutang" style="font-family: 'Poppins Regular';"></p>
+                    <p class="card-text" id="totalPiutang" style="font-family: 'Poppins Semi-Bold';"></p>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
             <div class="card" style="border-radius: 10px;">
                 <div class="card-body">
                     <h5 class="card-title" style="font-family: 'Poppins Bold'; color: #FF6384; padding-bottom: 4px">Total Hutang</h5>
-                    <p class="card-text" id="totalHutang" style="font-family: 'Poppins Regular';"></p>
+                    <p class="card-text" id="totalHutang" style="font-family: 'Poppins Semi-Bold';"></p>
                 </div>
             </div>
         </div>
