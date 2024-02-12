@@ -98,12 +98,23 @@
         var chartData = {!! $chartData !!};
         var originalData = chartData;
 
-        // Inisialisasi chart pertama dengan data dan labels
-        var labels1 = originalData.map(function(item) {
+        // Mendapatkan tanggal satu tahun lalu dari tanggal sekarang
+        var oneYearAgo = new Date();
+        oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
+
+        // Filter data untuk mendapatkan data satu tahun lalu
+        var dataOneYearAgo = originalData.filter(function(item) {
+            var itemDate = new Date(item.tanggal);
+            return itemDate >= oneYearAgo;
+        });
+
+        // Membuat array labels baru dengan tanggal satu tahun lalu
+        var labels1 = dataOneYearAgo.map(function(item) {
             return item.tanggal;
         });
 
-        var data1 = originalData.map(function(item) {
+        // Membuat array data baru dengan data satu tahun lalu
+        var data1 = dataOneYearAgo.map(function(item) {
             return item.total_qty_1; // Ganti total_qty_1 sesuai dengan kolom yang sesuai
         });
 
@@ -129,13 +140,24 @@
             }
         });
 
-        // Inisialisasi chart kedua dengan data dan labels yang berbeda
-        var labels2 = originalData.map(function(item) {
+        // Mendapatkan tanggal satu tahun lalu dari tanggal sekarang
+        var oneYearAgo = new Date();
+        oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
+
+        // Filter data untuk mendapatkan data satu tahun lalu
+        var dataOneYearAgo = originalData.filter(function(item) {
+            var itemDate = new Date(item.tanggal);
+            return itemDate >= oneYearAgo;
+        });
+
+        // Membuat array labels baru dengan tanggal satu tahun lalu
+        var labels2 = dataOneYearAgo.map(function(item) {
             return item.tanggal;
         });
 
-        var data2 = originalData.map(function(item) {
-            return item.total_qty_2; // Ganti total_qty_2 sesuai dengan kolom yang sesuai
+        // Membuat array data baru dengan data satu tahun lalu
+        var data2 = dataOneYearAgo.map(function(item) {
+            return item.total_qty_2; // Ganti total_qty_1 sesuai dengan kolom yang sesuai
         });
 
         var ctx2 = document.getElementById('chart-line-2').getContext('2d');

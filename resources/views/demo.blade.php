@@ -9,7 +9,7 @@
 
     .dropdown-menu li {
         display: block;
-        
+    } 
     /* CSS untuk mengatur ukuran tombol Next dan Previous */
     .dataTables_wrapper .dataTables_paginate .paginate_button {
         font-size: 14px; /* Atur ukuran font */
