@@ -61,7 +61,7 @@ class DemoController extends Controller
         // Simpan data ke dalam tabel orders
         $order = Order::create([
             'order_time' => now(),
-            'user_id' => $user->id,
+            'customer_id' => $user->id,
             'extra_cost' => $request->input('extra_cost'),
         ]);
 
